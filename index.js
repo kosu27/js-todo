@@ -13,8 +13,25 @@ const onClickAdd = () => {
   const li = document.createElement("li");
   li.innerText = inputText;
 
+  // button(完了)タグ生成
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+  completeButton.addEventListener("click", () => {
+    alert("完了しました");
+  });
+
+  // button(削除)タグ生成
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+  deleteButton.addEventListener("click", () => {
+    alert("削除しました");
+  });
+
   // divタグの子要素に各要素を追加
   div.appendChild(li);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
+  console.log(div);
 
   // 未完了のリストに追加
   document.getElementById("incomplete-list").appendChild(div);
